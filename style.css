@@ -414,7 +414,7 @@ header > .cta > a:hover {
 .footer > .nav > .links > a {
     display:block;
     padding:2px;
-    color:lightgrey
+    color:lightblue;
 }
 
 .footer > .socials{
