@@ -1,0 +1,427 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+}
+
+
+.about-me {
+    text-align:center;
+}
+.about-me > img { 
+    width: 100%; 
+    max-width: 580px;
+    border-radius: 960px;
+}
+.about-me > h1 {
+    font-family: 'Bungee Spice', cursive;
+}
+.about-me > p { color: darkviolet;
+    
+}
+
+
+
+header{
+    white-space:  nowrap;
+    background: #f51;
+    color: #fff;
+    padding: 18px;
+}
+header > .hamburger {
+    position: absolute;
+    z-index: 500;
+    top: 20px;
+    left: -48px;
+    width: 48px;
+    height: 48px;
+    transition: all .3s ease-out 0s;
+}
+header > .hamburger > span {
+    position: relative;
+    display: block;
+    height: 12px;
+    margin: 0 0 6px 0;
+    background: #fff;
+    border-radius: 96px;
+    transition: all .3s ease-in-out .3s;
+    box-shadow: 0 0 0px 2px white; 
+    cursor: pointer; 
+}
+header > .hamburger:hover > span{
+    box-shadow: 0 0 0px 2px;
+}
+header > a {
+    display: inline-block;
+    width: 33%;
+    text-decoration: none;
+    color: #fff; 
+}
+header > a > img {
+    width: 48px;
+    vertical-align: middle;
+}
+header > a > strong {
+    vertical-align: middle
+    font: 400 18px/24px arial;
+    text-transform: uppercase;
+    margin-left: 6px;
+}
+header > nav {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+header > nav > a {
+    position: relative;
+    top: 0px;
+    display: inline-block;
+    font:400 18px/42px arial;
+    color: #fff;
+    text-decoration: none;
+    margin:0px 12px;
+    transition: all .3s ease-in-out 0s;
+}
+header > nav > a:hover {
+     color: black;
+    top:-6px;
+}
+header > .cta {
+    display: inline-block;
+    width: 33%; 
+    text-align: right;
+}
+header > .cta > a {
+    display: inline-block;
+    font:900 18px/42px arial;
+    text-decoration: none;
+    color: #fff;
+    text-transform:uppercase;
+    border: 3px solid #fff;
+    border-radius: 96px;
+    padding: 0 18px;
+    transition: all .3s ease-in-out 0s;
+}
+header > .cta > a:hover {
+    background: #fff;
+    color: #f16; 
+}
+
+
+
+
+@media all and (max-width: 960px) {
+    header{
+        padding: 12px 12px 12px 72px; 
+    }
+    header > .hamburger {
+        left: 12px; 
+    }
+    header > nav {
+        position: fixed;
+        left: -250px;
+        top: 0px;
+        width: 250px;
+        height: 100vh;
+        transition: all .3s ease-in-out 0s;
+    }
+    header > nav > a {
+        display: block;
+    }
+    header > a {
+        width: 50%;
+    }
+    header > .cta {
+        width: 50%;
+    }
+    
+    header > .hamburger.open{
+        left: 262px;
+    }
+    header > .hamburger.open > span:nth-of-type(1){
+        transform: rotate(45deg);
+        top: 9px;
+    }
+ header > .hamburger.open > span:nth-of-type(2){
+        transform: rotate(-45deg);
+        top: -9px;
+    } 
+ header > .hamburger.open > span:nth-of-type(3){
+     opacity: 0; 
+    }
+ header > .open ~ nav  {
+        left: 0px;
+        background: #f119; 
+        box-shadow: 0px 0px 11px black;
+    }
+}
+
+.banner{
+    height: 72vh;
+    background-image: url(images/mountains.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    white-space: nowrap;
+    
+    clip-path: polygon(0 0, 100% 0, 98% 90%, 50% 100%, 0 90%);
+    background-attachment: fixed;
+}
+.banner:after {
+    display: inline-block;
+    content: '\00a0';
+    background: black; 
+    height: 100%;
+    vertical-align: middle;
+    width: 0px;
+}
+.banner > hgroup{
+    display: inline-block;
+    width: 100%;
+    max-width: 720px;
+    vertical-align: middle;
+}
+.banner > hgroup > img {
+    width: 100%;
+    max-width: 120px;
+}
+.banner > hgroup > h1 {
+    font: 900 36px/36px goldman; 
+    text-transform: uppercase;
+    text-transform: bold;
+    color: #fff;
+    margin: 12px 0;
+}
+.banner > hgroup > h2 {
+    font: 400 24px/24px goldman;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+}
+.banner > hgroup > a {
+    display: inline-block;
+    font: 900 24px/24px goldman; 
+    text-transform: uppercase;
+    text-transform: bold;
+    color: #fff;
+    text-decoration: none;
+    background-color: #f51;
+    box-shadow: 0 0 0 0px #f51; 
+    border-radius: 96px; 
+    padding: 8px 22px; 
+    margin: 12px 0;
+    transition: all .3s ease-out 0s;
+}
+.banner > hgroup > a:hover {
+    box-shadow: 0 0 0 3px #f51; 
+}
+
+
+
+
+
+.testamonials{
+    display:inline-block;
+    width:100%;
+    height:100%;
+    margin:0;
+    padding: 10px;
+    background:orange;
+}
+.testimonials > h2{
+    text-align:center;
+    font: 900 36px/36px Goldman;
+    color:#f51;
+}
+.testimonials > .ratings{
+    display:inline-block;
+   float: left;
+    width:25%;
+    height:364px;
+    margin:0px;
+    background: darkgrey;
+}
+.testimonials > .ratings > img{
+    height:25px;
+    width:25px;
+    margin:1%;
+    padding: 1%;
+    border:1%;
+}
+.testimonials > .ratings > .rating{
+    position: relative;
+    width: 154px;
+    height: 24px;
+    margin: 1%;
+    padding:3px 3px 3px 24px;
+    color:darkgrey
+}
+.testimonials > .ratings > .rating > .number{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display:inline-block;
+    width:24px;
+    height:24px;
+    text-align: center;
+    font: 900 14px/24px goldman;
+    color: white;
+}
+.testimonials > .ratings > .rating > .bar{
+    width:100%;
+    height: 18px;
+    display:inline-block;
+    background:white;
+    
+}
+.testimonials > .ratings > .rating > .bar > .percentage{
+    position:relative;
+    width:75px%;
+    height:25px%;
+    margin:0;
+    padding:0;
+    background:orange;
+    
+}
+
+
+.testimonials > .reviews{
+}
+.testimonials > .reviews > .review{
+    position: relative;
+    overflow: hidden;
+    margin:15;
+    background: aqua;
+}
+.testimonials > .reviews > .review > .profile{
+    display: inline-block;
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+}
+.testimonials > .reviews > .review > h3{
+    width:250px;
+    font: 900 15px/15px goldman;
+    display: inline-block;
+    vertical-align: middle;
+    text-align:left;
+    vertical-align: middle;
+    margin:0;
+}
+.testimonials > .reviews > .review > h3~img{
+    width: 25px;
+    vertical-align: middle;
+}
+.testimonials > .reviews > .review > .arrow {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width:8px;
+    height:8px;
+}
+.testimonials > .reviews > .review > p{
+    align-content:center;
+    max-width: 100px;
+    display: none;
+}
+.contactus{
+   text-align:center; 
+}
+.contactus > h2{
+    font: 400 28px/35px Goldman;
+}
+.contactus > nav{
+    
+}
+.contactus > nav > a{
+  display:inline-block;
+    background-color:beige;
+    border: 2px solid Black;
+    border-radius:13px;
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-right:4px;
+    padding-left:4px;
+    font: 400 12px/18px goldman;
+    color:#f51;
+    width:120px;
+    text-decoration:none;
+}
+.contactus > .socials{
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.contactus > .socials > a{
+    
+}
+.contactus > .socials > a > img{
+   width:42px;
+    padding-left:5px;
+    padding-right:5px;
+    
+}
+
+
+
+
+
+
+
+
+.footer{
+    width:100%;
+    height: 150px;
+    background-color:dimgrey;
+}
+
+.footer > .logo{
+    float: left;
+    width:50%;
+    overflow:auto;
+}
+.footer > .logo > img{
+    width:15%;
+    display:inline-block;
+    vertical-align:middle;
+}
+.footer > .logo > h1{
+    width:80%;
+    padding-left:10%;
+    display:inline-block;
+    vertical-align:middle;
+    color:#000;
+}
+
+.footer > .nav{
+    overflow:auto;
+    float:right;
+    width:50%;
+    text-align:right;
+}
+.footer > .nav > h1{
+    width:85%;
+    color:#000;
+    font-size: 18px;
+    vertical-align:middle;
+}
+.footer > .nav > .links{
+    width:45%; 
+    text-align:left;
+    float:right;
+}
+.footer > .nav > .links > a {
+    display:block;
+    padding:2px;
+    color:lightgrey
+}
+
+.footer > .socials{
+   display: block;
+    clear: both;
+    text-align:center;
+}
+.footer > .socials > a > img{
+    width:25px;
+}
