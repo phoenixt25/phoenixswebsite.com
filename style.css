@@ -425,3 +425,34 @@ header > .cta > a:hover {
 .footer > .socials > a > img{
     width:25px;
 }
+
+
+.squeeze{
+    
+}
+.squeeze > h1{
+    background: blue;
+}
+.squeeze > h2{
+    background: red;
+}
+.squeeze > .special{
+    background: cyan;
+    width:30px;
+}
+.squeeze > div{
+}
+.squeeze > .email{
+    background:blue;
+    
+}
+.squeeze > .name{
+    background: green;
+    
+}
+.squeeze > button{
+    background: purple;
+}
+.squeeze > a > img{
+    width:30px;
+}
